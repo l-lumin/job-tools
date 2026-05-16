@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Findy Job Card Button Injector",
+  "version": "1.1",
+  "description": "Injects a custom save button into Findy's job description cards.",
+  "permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://findy-code.io/likes"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
